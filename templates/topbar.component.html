@@ -1,0 +1,28 @@
+<p-toolbar>
+  <div class="ui-toolbar-group-left">
+    <a routerLink="/home"><i class="fa fa-home"></i> </a>
+    <a routerLink="/qq">QQ</a>
+    <a routerLink="/qiuji">球记</a>
+  </div>
+  <div class="ui-toolbar-group-right">
+    <a href="javascript:;" (click)="showDialog()">登录</a>
+    <a href="javascript:;" (click)="showDialog()">注册</a>
+  </div>
+</p-toolbar>
+
+<p-dialog header="登录" [(visible)]="logined" modal="modal" width="500" responsive="true">
+  <div>
+    <p>
+      <input type="text" pInputText placeholder="用户名" style="width: 100%"/>
+    </p>
+    <p>
+      <input type="password" pPassword placeholder="密码" style="width: 100%"/>
+    </p>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+      <button type="button" pButton icon="fa-close" (click)="logined=false" label="取消"></button>
+      <button type="button" pButton icon="fa-check" (click)="logined=false" label="确定"></button>
+    </div>
+  </p-footer>
+</p-dialog>

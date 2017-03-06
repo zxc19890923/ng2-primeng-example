@@ -1,0 +1,39 @@
+<div class="ui-g">
+  <div class="ui-g-12 ui-md-2">
+  </div>
+  <div class="ui-g-12 ui-md-8">
+    <!--tab标签页-->
+    <p-tabView>
+      <p-tabPanel header="篮球视屏">
+        <div class="ui-g-12 ui-md-10">
+          <!--查询条件框, 回车添加查询条件-->
+          <p-chips [(ngModel)]="videos" placeholder="输入并回车"></p-chips>
+        </div>
+        <div class="ui-g-12 ui-md-2">
+          <!--查询按钮-->
+          <button pButton type="button" label="查询" (click)="searchVideo()"></button>
+        </div>
+      </p-tabPanel>
+      <p-tabPanel header="篮球新闻">
+        <div class="ui-g-12 ui-md-10">
+          <!--查询条件框, 回车添加查询条件-->
+          <p-chips [(ngModel)]="news" placeholder="输入并回车"></p-chips>
+        </div>
+        <div class="ui-g-12 ui-md-2">
+          <!--查询按钮-->
+          <button pButton type="button" label="查询" (click)="searchNew()"></button>
+        </div>
+      </p-tabPanel>
+      <p-tabPanel header="篮球运动员">
+        <div class="ui-g-12 ui-md-10">
+          <!--查询条件框, 回车添加查询条件-->
+          <p-chips [(ngModel)]="players" placeholder="输入并回车"></p-chips>
+        </div>
+        <div class="ui-g-12 ui-md-2">
+          <!--查询按钮-->
+          <button pButton type="button" label="查询" (click)="searchPlayer()"></button>
+        </div>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>
